@@ -1,0 +1,21 @@
+# This is the MAKEFILE for Lab 4
+
+all: lab4 lab4.zip
+
+# Generic rule to turn .c files into their .o files
+# It is overkill on *.h - any header change and *everything* rebuilds
+%.o: %.c *.h
+	gcc -ansi -pedantic -g -c $< -o $@ 
+
+# This target is the executable
+# Can edit the .o files in the dependency list to customize
+lab4: <dependencies>
+	<rule(s)>
+	
+# Make zip file for submission
+lab4.zip: <dependencies>
+	<rule(s)>
+	
+clean:
+	<rule(s)>
+
